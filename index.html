@@ -30,9 +30,7 @@
       color: #00d4ff !important;
     }
   </style>
-</head>
 <body class="bg-gray-900 text-white">
-
   <!-- Navbar -->
   <nav class="flex justify-between items-center p-6 shadow-md backdrop-blur bg-gray-900/80 fixed top-0 w-full z-50 border-b border-gray-800">
     <h1 class="text-xl font-bold gradient-text">Alen P Shyju</h1>
@@ -49,19 +47,18 @@
     </button>
   </nav>
 
-  <!-- Mobile Menu -->
-  <div id="mobile-menu" class="hidden fixed inset-0 bg-gray-900 z-40 flex flex-col items-center justify-center space-y-8 text-xl">
-    <a href="#home" class="hover:text-cyan-400 transition">Home</a>
-    <a href="#about" class="hover:text-cyan-400 transition">About</a>
-    <a href="#resume" class="hover:text-cyan-400 transition">Resume</a>
-    <a href="#projects" class="hover:text-cyan-400 transition">Projects</a>
-    <a href="#research" class="hover:text-cyan-400 transition">Research</a>
-    <a href="#contact" class="hover:text-cyan-400 transition">Contact</a>
-    <button id="close-menu" class="absolute top-6 right-6 text-2xl">
+  <!-- Improved Mobile Menu -->
+  <div id="mobile-menu" class="hidden fixed inset-0 bg-gray-900/95 z-40 flex flex-col items-center justify-center space-y-8 text-xl p-4">
+    <a href="#home" class="hover:text-cyan-400 transition py-2">Home</a>
+    <a href="#about" class="hover:text-cyan-400 transition py-2">About</a>
+    <a href="#resume" class="hover:text-cyan-400 transition py-2">Resume</a>
+    <a href="#projects" class="hover:text-cyan-400 transition py-2">Projects</a>
+    <a href="#research" class="hover:text-cyan-400 transition py-2">Research</a>
+    <a href="#contact" class="hover:text-cyan-400 transition py-2">Contact</a>
+    <button id="close-menu" class="absolute top-6 right-6 text-2xl hover:text-cyan-400 transition">
       <i class="fas fa-times"></i>
     </button>
   </div>
-
   <!-- Hero Section -->
   <section id="home" class="min-h-screen flex items-center justify-center text-center px-6 pt-20">
     <div class="max-w-4xl">
@@ -685,18 +682,39 @@
   </footer>
 
   <script>
-    // Mobile menu toggle
-    const menuToggle = document.getElementById('menu-toggle');
-    const closeMenu = document.getElementById('close-menu');
-    const mobileMenu = document.getElementById('mobile-menu');
-    
-    menuToggle.addEventListener('click', () => {
+
+  // Enhanced Mobile Menu Functionality
+  const menuToggle = document.getElementById('menu-toggle');
+  const closeMenu = document.getElementById('close-menu');
+  const mobileMenu = document.getElementById('mobile-menu');
+  const mobileLinks = document.querySelectorAll('#mobile-menu a');
+  
+  // Toggle menu function
+  function toggleMenu(show) {
+    if (show) {
       mobileMenu.classList.remove('hidden');
-    });
-    
-    closeMenu.addEventListener('click', () => {
+      document.body.style.overflow = 'hidden'; // Prevent scrolling
+    } else {
       mobileMenu.classList.add('hidden');
-    });
+      document.body.style.overflow = 'auto'; // Enable scrolling
+    }
+  }
+  
+  // Event listeners
+  menuToggle.addEventListener('click', () => toggleMenu(true));
+  closeMenu.addEventListener('click', () => toggleMenu(false));
+  
+  // Close menu when clicking any link
+  mobileLinks.forEach(link => {
+    link.addEventListener('click', () => toggleMenu(false));
+  });
+  
+  // Close menu when clicking outside content
+  mobileMenu.addEventListener('click', (e) => {
+    if (e.target === mobileMenu) {
+      toggleMenu(false);
+    }
+  });
     
     // Typing animation
     const typedTextSpan = document.getElementById('typed');
@@ -789,46 +807,6 @@
     }, 500);
 
 
-    
-  // Form Submission
-  //   document.addEventListener('DOMContentLoaded', function() {
-  //   const contactForm = document.getElementById('contactForm');
-    
-  //   if (contactForm) {
-  //     contactForm.addEventListener('submit', function(e) {
-  //       e.preventDefault();
-        
-  //       // Get form values
-  //       const name = document.getElementById('name').value;
-  //       const email = document.getElementById('email').value;
-  //       const subject = document.getElementById('subject').value;
-  //       const message = document.getElementById('message').value;
-        
-  //       // Basic validation
-  //       if (!name || !email || !message) {
-  //         alert('Please fill in all required fields');
-  //         return;
-  //       }
-        
-  //       // Email validation
-  //       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  //       if (!emailRegex.test(email)) {
-  //         alert('Please enter a valid email address');
-  //         return;
-  //       }
-        
-  //       // Show success message
-  //       alert(`Thank you, ${name}! Your message has been received. We will get back to you shortly. For urgent inquiries, please contact us directly using the email address provided.`);
-
-        
-  //       // Reset the form
-  //       contactForm.reset();
-        
-       
-  //     });
-  //   }
-  // });
-
-  // </script>
+    </script>
 </body>
 </html>
