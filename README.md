@@ -1,7 +1,4 @@
 # Alen P Shyju - Cybersecurity Portfolio
-
-![Portfolio Screenshot](https://alshytech.vercel.app/og-image.png)
-
 ## 🌐 Live Demo
 [Visit My Portfolio](https://alshytech.vercel.app/)
 
