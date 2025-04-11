@@ -1,0 +1,834 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta http-equiv="Cache-Control" content="no-store" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Alen P Shyju | Cybersecurity Portfolio</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <style>
+    body {
+      font-family: 'Poppins', sans-serif;
+      scroll-behavior: smooth;
+    }
+    .gradient-text {
+      background: linear-gradient(90deg, #00d4ff 0%, #0075ff 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    .card-hover:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 10px 25px rgba(0, 213, 255, 0.3);
+    }
+    .skill-bar {
+      transition: width 1.5s ease-in-out;
+    }
+    .active-section {
+      color: #00d4ff !important;
+    }
+  </style>
+</head>
+<body class="bg-gray-900 text-white">
+
+  <!-- Navbar -->
+  <nav class="flex justify-between items-center p-6 shadow-md backdrop-blur bg-gray-900/80 fixed top-0 w-full z-50 border-b border-gray-800">
+    <h1 class="text-xl font-bold gradient-text">Alen P Shyju</h1>
+    <ul class="flex gap-6 hidden md:flex">
+      <li><a href="#home" class="hover:text-cyan-400 transition nav-link active-section">Home</a></li>
+      <li><a href="#about" class="hover:text-cyan-400 transition nav-link">About</a></li>
+      <li><a href="#resume" class="hover:text-cyan-400 transition nav-link">Resume</a></li>
+      <li><a href="#projects" class="hover:text-cyan-400 transition nav-link">Projects</a></li>
+      <li><a href="#research" class="hover:text-cyan-400 transition nav-link">Research</a></li>
+      <li><a href="#contact" class="hover:text-cyan-400 transition nav-link">Contact</a></li>
+    </ul>
+    <button class="md:hidden text-2xl" id="menu-toggle">
+      <i class="fas fa-bars"></i>
+    </button>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <div id="mobile-menu" class="hidden fixed inset-0 bg-gray-900 z-40 flex flex-col items-center justify-center space-y-8 text-xl">
+    <a href="#home" class="hover:text-cyan-400 transition">Home</a>
+    <a href="#about" class="hover:text-cyan-400 transition">About</a>
+    <a href="#resume" class="hover:text-cyan-400 transition">Resume</a>
+    <a href="#projects" class="hover:text-cyan-400 transition">Projects</a>
+    <a href="#research" class="hover:text-cyan-400 transition">Research</a>
+    <a href="#contact" class="hover:text-cyan-400 transition">Contact</a>
+    <button id="close-menu" class="absolute top-6 right-6 text-2xl">
+      <i class="fas fa-times"></i>
+    </button>
+  </div>
+
+  <!-- Hero Section -->
+  <section id="home" class="min-h-screen flex items-center justify-center text-center px-6 pt-20">
+    <div class="max-w-4xl">
+      <h2 class="text-4xl md:text-6xl font-bold mb-4">Hi, I'm <span class="gradient-text">Alen P Shyju</span></h2>
+      <div class="text-lg md:text-2xl mb-8">
+        <span class="typed-text" id="typed"></span><span class="cursor">&nbsp;</span>
+      </div>
+      <p class="text-lg md:text-xl mb-8 text-gray-300">Cybersecurity Specialist | MCA Graduate | Aspiring Researcher</p>
+      <div class="flex gap-4 justify-center">
+        <a href="#projects" class="px-6 py-3 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 rounded-xl text-white transition transform hover:scale-105 shadow-lg shadow-cyan-500/20">
+          View Projects
+        </a>
+        <a href="#contact" class="px-6 py-3 border border-cyan-400 text-cyan-400 hover:bg-cyan-400/10 rounded-xl transition transform hover:scale-105">
+          Contact Me
+        </a>
+      </div>
+      <div class="mt-12 flex justify-center space-x-4">
+        <a href="https://www.linkedin.com/in/alen-p-shyju-503b56253/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-cyan-400 transition text-2xl">
+          <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="https://github.com/AlenShyju" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-cyan-400 transition text-2xl">
+          <i class="fab fa-github"></i>
+        </a>
+        <a href="https://x.com/alen_shyju" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-cyan-400 transition text-2xl">
+          <i class="fab fa-twitter"></i>
+        </a>
+        <a href="https://alshytech.vercel.app/" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-cyan-400 transition text-2xl">
+          <i class="fas fa-globe"></i>
+        </a>
+        
+        <a href="mailto:alenshyju27@gmail.com" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-cyan-400 transition text-2xl">
+          <i class="fas fa-envelope"></i>
+        </a>
+      </div>
+      
+    </div>
+    <div class="absolute bottom-10 left-0 right-0 text-center animate-bounce">
+      <a href="#about" class="text-gray-400 hover:text-cyan-400 transition">
+        <i class="fas fa-chevron-down text-2xl"></i>
+      </a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-20 px-6 md:px-20 bg-gray-800/50">
+    <div class="max-w-6xl mx-auto">
+      <h3 class="text-3xl font-semibold mb-6 gradient-text inline-block">About Me</h3>
+      <div class="flex flex-col md:flex-row gap-12 items-center">
+        <div class="md:w-1/3 flex justify-center">
+          <div class="relative">
+            <img src="/static/alen.jpg" alt="Alen P Shyju" class="w-64 h-64 rounded-full object-cover border-4 border-cyan-400/30 shadow-lg shadow-cyan-500/20">
+            <div class="absolute -inset-2 border-4 border-cyan-400/20 rounded-full animate-spin-slow pointer-events-none"></div>
+          </div>
+        </div>
+        <div class="md:w-2/3">
+          <h4 class="text-2xl font-semibold mb-4">Cybersecurity Enthusiast & Developer</h4>
+          <p class="text-lg leading-relaxed text-gray-300 mb-6 text-justify max-w-3xl mx-auto" style="text-justify: inter-word; hyphens: auto;">
+            I am Alen P Shyju, an adaptable and driven MCA student at Lovely Professional University, with a strong foundation in software development, networking, and cybersecurity. Passionate about emerging technologies, I bring hands-on project experience and a problem-solving mindset. I am seeking challenging opportunities where I can apply my skills, contribute to organizational goals, and grow professionally.
+          </p>
+          
+          <div class="grid grid-cols-2 gap-4 mb-6">
+            <div>
+              <p class="text-gray-400"><strong>Name:</strong> <span class="text-white">Alen P Shyju</span></p>
+              <p class="text-gray-400"><strong>Degree:</strong> <span class="text-white">Master of Computer Application</span></p>
+            </div>
+            <div>
+              <p class="text-gray-400"><strong>Email:</strong> <span class="text-white">alenshyju27@gmail.com</span></p>
+              <p class="text-gray-400"><strong>Focus:</strong> <span class="text-white">Cybersecurity & Research</span></p>
+            </div>
+          </div>
+          <a href="#resume" class="inline-block px-6 py-2 bg-cyan-500 hover:bg-cyan-600 rounded-lg text-white transition transform hover:scale-105">
+            View Resume
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Resume Section -->
+  <section id="resume" class="py-20 px-6 md:px-20">
+    <div class="max-w-6xl mx-auto">
+      <h3 class="text-3xl font-semibold mb-12 gradient-text inline-block">My Resume</h3>
+      
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+        <!-- Education -->
+        <div class="bg-gray-800/50 p-6 rounded-xl shadow-lg border border-gray-700 card-hover transition">
+          <div class="flex items-center mb-4">
+            <div class="bg-cyan-500/20 p-3 rounded-full mr-4">
+              <i class="fas fa-graduation-cap text-cyan-400 text-xl"></i>
+            </div>
+            <h4 class="text-xl font-semibold">Education</h4>
+          </div>
+          <div class="space-y-6">
+            <div class="border-l-2 border-cyan-400 pl-4">
+              <h5 class="font-semibold">Master of Computer Application</h5>
+              <p class="text-gray-400 text-sm">Lovely Professional University • 2023-2025</p>
+              <p class="text-gray-300 mt-1">Specialized in Cybersecurity and Network Systems</p>
+            </div>
+            <div class="border-l-2 border-cyan-400 pl-4">
+              <h5 class="font-semibold">Bachelor of Computer Application</h5>
+              <p class="text-gray-400 text-sm">Nehru Arts And Science College • 2020-2023</p>
+              <p class="text-gray-300 mt-1">Focus on Software Development and Security Fundamentals</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Experience -->
+        <div class="bg-gray-800/50 p-6 rounded-xl shadow-lg border border-gray-700 card-hover transition">
+          <div class="flex items-center mb-4">
+            <div class="bg-cyan-500/20 p-3 rounded-full mr-4">
+              <i class="fas fa-briefcase text-cyan-400 text-xl"></i>
+            </div>
+            <h4 class="text-xl font-semibold">Experience</h4>
+          </div>
+          <div class="space-y-6">
+            <div class="border-l-2 border-cyan-400 pl-4">
+              <h5 class="font-semibold">Ethical Hacking Intern</h5>
+              <p class="text-gray-400 text-sm">TECHBYHEART India Pvt Ltd •  2022</p>
+              <p class="text-gray-300 mt-1">Identified system vulnerabilities and performed penetration testing to enhance security measures.</p>
+            </div>
+            <div class="border-l-2 border-cyan-400 pl-4">
+              <h5 class="font-semibold">Cybersecurity Intern</h5>
+              <p class="text-gray-400 text-sm">Techvanto • 2024</p>
+              <p class="text-gray-300 mt-1">Developed security protocols and vulnerability assessment tools</p>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Skills -->
+        <div class="bg-gray-800/50 p-6 rounded-xl shadow-lg border border-gray-700 card-hover transition">
+          <div class="flex items-center mb-4">
+            <div class="bg-cyan-500/20 p-3 rounded-full mr-4">
+              <i class="fas fa-code text-cyan-400 text-xl"></i>
+            </div>
+            <h4 class="text-xl font-semibold">Skills</h4>
+          </div>
+          <div class="space-y-4">
+            <div>
+              <div class="flex justify-between mb-1">
+                <span> Cybersecurity</span>
+                <span>90%</span>
+              </div>
+              <div class="w-full bg-gray-700 rounded-full h-2">
+                <div class="bg-cyan-500 h-2 rounded-full skill-bar" style="width: 90%"></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between mb-1">
+                <span>Linux Administration</span>
+                <span>88%</span>
+              </div>
+              <div class="w-full bg-gray-700 rounded-full h-2">
+                <div class="bg-cyan-500 h-2 rounded-full skill-bar" style="width: 88%"></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between mb-1">
+                <span>Python</span>
+                <span>85%</span>
+              </div>
+              <div class="w-full bg-gray-700 rounded-full h-2">
+                <div class="bg-cyan-500 h-2 rounded-full skill-bar" style="width: 85%"></div>
+              </div>
+            </div>
+            <div>
+              <div class="flex justify-between mb-1">
+                <span>Adaptability</span>
+                <span>80%</span>
+              </div>
+              <div class="w-full bg-gray-700 rounded-full h-2">
+                <div class="bg-cyan-500 h-2 rounded-full skill-bar" style="width: 80%"></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Certifications & Awards -->
+      
+      <div class="bg-gray-800/50 p-8 rounded-xl shadow-lg border border-gray-700 hover:border-cyan-400/30 transition duration-300">
+        <h4 class="text-2xl font-semibold mb-6 gradient-text inline-block">Certifications & Awards</h4>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+          
+          <!-- Certification 1 -->
+          <a href="https://coursera.org/share/ff8e86f466ca4bf5358142055b78ff27" target="_blank" rel="noopener noreferrer" 
+             class="flex items-start group hover:bg-gray-700/50 p-3 rounded-lg transition">
+            <div class="bg-cyan-500/20 p-2 rounded-lg mr-4 group-hover:bg-cyan-500/30 transition">
+              <i class="fas fa-award text-cyan-400 text-xl"></i>
+            </div>
+            <div>
+              <h5 class="font-semibold group-hover:text-cyan-400 transition">Network Security & Database Vulnerabilities</h5>
+              <p class="text-gray-400 text-sm">IBM • 2021</p>
+              <p class="text-cyan-400 text-xs mt-1 opacity-0 group-hover:opacity-100 transition">View Certificate →</p>
+            </div>
+          </a>
+      
+          <!-- Certification 2 -->
+          <a href="https://drive.google.com/file/d/1_VazRe330Bfww60YY34sy_07r8iZs5To/view?usp=sharing" target="_blank" rel="noopener noreferrer" 
+             class="flex items-start group hover:bg-gray-700/50 p-3 rounded-lg transition">
+            <div class="bg-cyan-500/20 p-2 rounded-lg mr-4 group-hover:bg-cyan-500/30 transition">
+              <i class="fas fa-award text-cyan-400 text-xl"></i>
+            </div>
+            <div>
+              <h5 class="font-semibold group-hover:text-cyan-400 transition">National Youth Parliament </h5>
+              <p class="text-gray-400 text-sm"> Govt.of India • 2022</p>
+              <p class="text-cyan-400 text-xs mt-1 opacity-0 group-hover:opacity-100 transition">View Details →</p>
+            </div>
+          </a>
+      
+          <!-- Certification 3 -->
+          <a href="https://drive.google.com/file/d/1L_Am-xir8Ln5-NIFzz7CREEkIswXQ3S2/view" target="_blank" rel="noopener noreferrer" 
+             class="flex items-start group hover:bg-gray-700/50 p-3 rounded-lg transition">
+            <div class="bg-cyan-500/20 p-2 rounded-lg mr-4 group-hover:bg-cyan-500/30 transition">
+              <i class="fas fa-award text-cyan-400 text-xl"></i>
+            </div>
+            <div>
+              <h5 class="font-semibold group-hover:text-cyan-400 transition"> Cyber Security </h5>
+              <p class="text-gray-400 text-sm"> Techvanto Academy • 2024</p>
+              <p class="text-cyan-400 text-xs mt-1 opacity-0 group-hover:opacity-100 transition">View Certificate →</p>
+            </div>
+          </a>
+      
+          <!-- Certification 4 -->
+          <a href="#" target="_blank" rel="noopener noreferrer" 
+             class="flex items-start group hover:bg-gray-700/50 p-3 rounded-lg transition">
+            <div class="bg-cyan-500/20 p-2 rounded-lg mr-4 group-hover:bg-cyan-500/30 transition">
+              <i class="fas fa-award text-cyan-400 text-xl"></i>
+            </div>
+            <div>
+              <h5 class="font-semibold group-hover:text-cyan-400 transition">Advisory Board Member</h5>
+              <p class="text-gray-400 text-sm">NASC • 2022-2023</p>
+              <p class="text-cyan-400 text-xs mt-1 opacity-0 group-hover:opacity-100 transition">View Details →</p>
+            </div>
+          </a>
+      
+          <!-- Certification 5 -->
+          <a href="https://coursera.org/share/0baa047db372824d532a41107cc043b3" target="_blank" rel="noopener noreferrer" 
+             class="flex items-start group hover:bg-gray-700/50 p-3 rounded-lg transition">
+            <div class="bg-cyan-500/20 p-2 rounded-lg mr-4 group-hover:bg-cyan-500/30 transition">
+              <i class="fas fa-award text-cyan-400 text-xl"></i>
+            </div>
+            <div>
+              <h5 class="font-semibold group-hover:text-cyan-400 transition">Kali Linux </h5>
+              <p class="text-gray-400 text-sm">Board Infinity • 2024</p>
+              <p class="text-cyan-400 text-xs mt-1 opacity-0 group-hover:opacity-100 transition">View Certificate →</p>
+            </div>
+          </a>
+      
+          <!-- Certification 6 -->
+          <a href="https://codered.eccouncil.org/certificate/4e7338d1-28f3-4bff-97ce-578d6e80f3e5?lessonId=f37a6de8-360a-4ec0-9bf1-6d962f5cddc4&finalAssessment=true&type=1&logged=false" target="_blank" rel="noopener noreferrer" 
+             class="flex items-start group hover:bg-gray-700/50 p-3 rounded-lg transition">
+            <div class="bg-cyan-500/20 p-2 rounded-lg mr-4 group-hover:bg-cyan-500/30 transition">
+              <i class="fas fa-award text-cyan-400 text-xl"></i>
+            </div>
+            <div>
+              <h5 class="font-semibold group-hover:text-cyan-400 transition">Ethical Hacking </h5>
+              <p class="text-gray-400 text-sm"> EC-Council • 2024</p>
+              <p class="text-cyan-400 text-xs mt-1 opacity-0 group-hover:opacity-100 transition">View Certificate →</p>
+            </div>
+          </a>
+      
+        </div>
+      </div>
+
+  </section>
+
+  <!-- Projects Section -->
+  <section id="projects" class="py-20 px-6 md:px-20 bg-gray-800/50">
+    <div class="max-w-6xl mx-auto">
+      <h3 class="text-3xl font-semibold mb-12 gradient-text inline-block">My Projects</h3>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8 mb-12">
+        <!-- Project 1 -->
+        <div class="bg-gray-800/50 p-6 rounded-xl shadow-lg border border-gray-700 card-hover transition group">
+          <div class="relative overflow-hidden rounded-lg mb-4 h-48">
+            <img src="/static/enc.png" alt="EchoCrypt" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <div class="absolute inset-0 bg-cyan-500/20 opacity-0 group-hover:opacity-100 transition duration-500 flex items-center justify-center">
+              <a href="https://encryptoalen.vercel.app/" target="_blank" rel="noopener noreferrer" class="px-4 py-2 bg-cyan-500 rounded-lg text-white">View Details</a>
+            </div>
+          </div>
+          <h4 class="text-xl font-semibold mb-2">EchoCrypt</h4>
+          <p class="text-gray-300 mb-4 text-justify max-w-3xl mx-auto" style="text-justify: inter-word; hyphens: auto;">This JavaScript-based tool uses a modified Vigenère cipher to encrypt and decrypt messages using a user-provided key. It ensures the output contains only alphanumeric characters (0-9, A-Z, a-z), making it safe for sharing and storage. The encryption runs entirely on the client side without external dependencies. It's ideal for simple secure communication, obfuscation, or learning cryptographic concepts.</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1 bg-gray-700 rounded-full text-sm">JavaScript</span>
+            <span class="px-3 py-1 bg-gray-700 rounded-full text-sm">Cryptography</span>
+            <span class="px-3 py-1 bg-gray-700 rounded-full text-sm">Vigenère cipher</span>
+          </div>
+        </div>
+        
+        <!-- Project 2 -->
+        <div class="bg-gray-800/50 p-6 rounded-xl shadow-lg border border-gray-700 card-hover transition group">
+          <div class="relative overflow-hidden rounded-lg mb-4 h-48">
+            <img src="/static/graphical.png" alt="Graphical Auth App" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <div class="absolute inset-0 bg-cyan-500/20 opacity-0 group-hover:opacity-100 transition duration-500 flex items-center justify-center">
+              <a href="https://github.com/AlenShyju/Graphical-Auth"  target="_blank" rel="noopener noreferrer" class="px-4 py-2 bg-cyan-500 rounded-lg text-white">View Details</a>
+            </div>
+          </div>
+          <h4 class="text-xl font-semibold mb-2">Graphical Auth App</h4>
+          <p class="text-gray-300 mb-4 text-justify max-w-3xl mx-auto" style="text-justify: inter-word; hyphens: auto;">MLGAB is a Multi-Layered Graphical Authentication Framework designed to enhance the security of Graphical Authentication Systems (GAS). It combines graphical passwords with behavioral biometrics and machine learning to detect anomalies in real-time. This approach improves both security and usability by identifying unauthorized access attempts based on user behavior. MLGAB addresses common challenges in traditional graphical authentication methods.</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1 bg-gray-700 rounded-full text-sm">Python</span>
+            <span class="px-3 py-1 bg-gray-700 rounded-full text-sm">Machine Learning</span>
+            <span class="px-3 py-1 bg-gray-700 rounded-full text-sm">MongoDB</span>
+            <span class="px-3 py-1 bg-gray-700 rounded-full text-sm">Security</span>
+          </div>
+        </div>
+
+        <!-- Project 3 - Sign Language -->
+        <div class="bg-gray-800/50 p-6 rounded-xl shadow-lg border border-gray-700 card-hover transition group">
+          <div class="relative overflow-hidden rounded-lg mb-4 h-48">
+            <img src="/static/sign.png" alt="Sign Language Translator" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <div class="absolute inset-0 bg-cyan-500/20 opacity-0 group-hover:opacity-100 transition duration-500 flex items-center justify-center">
+              <a href="https://github.com/AlenShyju/-Sign-Languages-To-Text-Using-Finger-Gestures/blob/main/README.md" target="_blank" rel="noopener noreferrer" class="px-4 py-2 bg-cyan-500 rounded-lg text-white">View Details</a>
+            </div>
+          </div>
+          <h4 class="text-xl font-semibold mb-2">Sign Language Translator</h4>
+          <p class="text-gray-300 mb-4">An application that translates sign language gestures into text or speech using computer vision and machine learning techniques.</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1 bg-gray-700 rounded-full text-sm">Python</span>
+            <span class="px-3 py-1 bg-gray-700 rounded-full text-sm">OpenCV</span>
+            <span class="px-3 py-1 bg-gray-700 rounded-full text-sm">TensorFlow</span>
+            <span class="px-3 py-1 bg-gray-700 rounded-full text-sm">AI</span>
+          </div>
+        </div>
+
+        <!-- Project 4 - Administrative System -->
+        <div class="bg-gray-800/50 p-6 rounded-xl shadow-lg border border-gray-700 card-hover transition group">
+          <div class="relative overflow-hidden rounded-lg mb-4 h-48">
+            <img src="/static/administravie.jpg" alt="Administrative System" class="w-full h-full object-cover group-hover:scale-105 transition duration-500">
+            <div class="absolute inset-0 bg-cyan-500/20 opacity-0 group-hover:opacity-100 transition duration-500 flex items-center justify-center">
+              <a href="https://github.com/AlenShyju/ADMINISTRATION-SYSTEM/blob/main/VB.net.pdf" target="_blank" rel="noopener noreferrer" class="px-4 py-2 bg-cyan-500 rounded-lg text-white">View Details</a>
+            </div>
+          </div>
+          <h4 class="text-xl font-semibold mb-2">Administrative System</h4>
+          <p class="text-gray-300 mb-4">A comprehensive administrative management system for organizations with user management, data tracking, and reporting features.</p>
+          <div class="flex flex-wrap gap-2">
+            <span class="px-3 py-1 bg-gray-700 rounded-full text-sm">VB.NET</span>
+            <span class="px-3 py-1 bg-gray-700 rounded-full text-sm">ADO.NET</span>
+            <span class="px-3 py-1 bg-gray-700 rounded-full text-sm">SQL Server</span>
+            <span class="px-3 py-1 bg-gray-700 rounded-full text-sm">Management</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    
+  
+      <!-- Works in Progress -->
+      <div>
+        <h4 class="text-2xl font-semibold mb-6 gradient-text inline-block">Works in Progress</h4>
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+          <div class="bg-gray-800/50 p-6 rounded-xl border border-dashed border-gray-600 hover:border-cyan-400/50 transition">
+            <div class="flex items-center mb-3">
+              <div class="bg-cyan-500/20 p-2 rounded-full mr-3">
+                <i class="fas fa-code-branch text-cyan-400"></i>
+              </div>
+              <h5 class="font-semibold">Histo-Seek</h5>
+            </div>
+            <p class="text-gray-400 text-sm" style="text-align: justify; text-justify: inter-word; hyphens: auto; max-width: 600px;">
+              HistoSeek is a digital forensic tool used for searching and analyzing historical data or records. It helps investigators efficiently retrieve and examine archived information for forensic analysis.
+            </p>
+            
+          </div>
+          <div class="bg-gray-800/50 p-6 rounded-xl border border-dashed border-gray-600 hover:border-cyan-400/50 transition">
+            <div class="flex items-center mb-3">
+              <div class="bg-cyan-500/20 p-2 rounded-full mr-3">
+                <i class="fas fa-code-branch text-cyan-400"></i>
+              </div>
+              <h5 class="font-semibold">PixVault</h5>
+            </div>
+            <p class="text-gray-400 text-sm text-justify  max-w-3xl mx-auto" style="text-justify: inter-word; hyphens: auto;">PixVault is a secure and intelligent platform designed to store, protect, and manage your images with advanced encryption and privacy features.</p>
+          </div>
+          <div class="bg-gray-800/50 p-6 rounded-xl border border-dashed border-gray-600 hover:border-cyan-400/50 transition">
+            <div class="flex items-center mb-3">
+              <div class="bg-cyan-500/20 p-2 rounded-full mr-3">
+                <i class="fas fa-code-branch text-cyan-400"></i>
+              </div>
+              <h5 class="font-semibold">GhostTap</h5>
+            </div>
+            <p class="text-gray-400 text-sm max-w-3xl mx-auto" style="text-justify: inter-word; hyphens: auto;"> A simulated zero-click vulnerability framework designed to demonstrate and analyze silent exploit techniques.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Research Section -->
+  <section id="research" class="py-20 px-6 md:px-20">
+    <div class="max-w-6xl mx-auto">
+      <h3 class="text-3xl font-semibold mb-12 gradient-text inline-block">My Research Work</h3>
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+        <!-- Research 1 -->
+        <div class="bg-gray-800/50 p-6 rounded-xl shadow-lg border border-gray-700 card-hover transition">
+          <div class="flex items-center mb-4">
+            <div class="bg-cyan-500/20 p-3 rounded-full mr-4">
+              <i class="fas fa-microscope text-cyan-400 text-xl"></i>
+            </div>
+            <h4 class="text-xl font-semibold">Self-Healing Photonic AI: Bio-Inspired Light-Based Circuits for Smarter Autonomy</h4>
+          </div>
+          <p class="text-gray-300 mb-4"> A revolutionary SHNPC model that merges biologically inspired AI, dynamic materials, and photonic computing. Mimicking brain-like adaptability, SHNPCs use self-repairing polymers for fast error recovery and learning. Tested in edge AI and space environment.</p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="px-3 py-1 bg-gray-700 rounded-full text-sm">Optical Neural Networks</span>
+            <span class="px-3 py-1 bg-gray-700 rounded-full text-sm">Spiking Neural Networks</span>
+            <span class="px-3 py-1 bg-gray-700 rounded-full text-sm">Organic Polymers</span>
+          </div>
+          <a href="https://alenshyju.blogspot.com/2025/03/self-healing-neuromorphic-photonic.html" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:underline inline-flex items-center">
+            Read Paper <i class="fas fa-arrow-right ml-2"></i>
+          </a>
+        </div>
+
+        <!-- Research 2 -->
+        <div class="bg-gray-800/50 p-6 rounded-xl shadow-lg border border-gray-700 card-hover transition">
+          <div class="flex items-center mb-4">
+            <div class="bg-cyan-500/20 p-3 rounded-full mr-4">
+              <i class="fas fa-microscope text-cyan-400 text-xl"></i>
+            </div>
+            <h4 class="text-xl font-semibold">Graphical Password Security</h4>
+          </div>
+          <p class="text-gray-300 mb-4"> A multi-layered graphical authentication framework that combines image-based login with behavioral biometrics to enhance both security and user experience.</p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="px-3 py-1 bg-gray-700 rounded-full text-sm">Hashing</span>
+            <span class="px-3 py-1 bg-gray-700 rounded-full text-sm">Security</span>
+            <span class="px-3 py-1 bg-gray-700 rounded-full text-sm">Anomaly Detection</span>
+          </div>
+          <a href="https://alenshyju.blogspot.com/2025/04/enhancing-security-and-usability-in.html" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:underline inline-flex items-center">
+            Read Paper <i class="fas fa-arrow-right ml-2"></i>
+          </a>
+        </div>
+        <!-- Research 3 -->
+        <div class="bg-gray-800/50 p-6 rounded-xl shadow-lg border border-gray-700 card-hover transition">
+          <div class="flex items-center mb-4">
+            <div class="bg-cyan-500/20 p-3 rounded-full mr-4">
+              <i class="fas fa-microscope text-cyan-400 text-xl"></i>
+            </div>
+            <h4 class="text-xl font-semibold">QryptoChain</h4>
+          </div>
+          <p class="text-gray-300 mb-4">Quantum-Chain is a unified framework that integrates quantum-secured distributed ledger technology with decentralized quantum computing..</p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="px-3 py-1 bg-gray-700 rounded-full text-sm">Blockchain Protocols</span>
+            <span class="px-3 py-1 bg-gray-700 rounded-full text-sm">Post-Quantum Cryptography</span>
+            <span class="px-3 py-1 bg-gray-700 rounded-full text-sm">Smart Contracts</span>
+          </div>
+          <a href="https://alenshyju.blogspot.com/2025/03/quantum-chain-synergistic-framework-for.html" target="_blank" rel="noopener noreferrer" class="text-cyan-400 hover:underline inline-flex items-center">
+            Read Paper <i class="fas fa-arrow-right ml-2"></i>
+          </a>
+        </div>
+
+        <!-- Research 4 -->
+        <div class="bg-gray-800/50 p-6 rounded-xl shadow-lg border border-gray-700 card-hover transition">
+          <div class="flex items-center mb-4">
+            <div class="bg-cyan-500/20 p-3 rounded-full mr-4">
+              <i class="fas fa-microscope text-cyan-400 text-xl"></i>
+            </div>
+            <h4 class="text-xl font-semibold">Digital Olfaction</h4>
+          </div>
+          <p class="text-gray-300 mb-4">
+          <p class="text-gray-300 mb-4">Introduces a novel digital olfaction framework that enables real-time, context-aware scent emission on smartphones.</p>
+          <div class="flex flex-wrap gap-2 mb-4">
+            <span class="px-3 py-1 bg-gray-700 rounded-full text-sm">Machine Learning</span>
+            <span class="px-3 py-1 bg-gray-700 rounded-full text-sm">Edge AI</span>
+            <span class="px-3 py-1 bg-gray-700 rounded-full text-sm">Microfluidic systems</span>
+          </div>
+          <a href="#" class="text-cyan-400 hover:underline inline-flex items-center">
+            Read Paper <i class="fas fa-arrow-right ml-2"></i>
+          </a>
+        </div>
+      </div>
+
+      
+      
+      <!-- Research Interests -->
+      <div class="mt-12 bg-gray-800/50 p-8 rounded-xl shadow-lg border border-gray-700">
+        <h4 class="text-2xl font-semibold mb-6 gradient-text inline-block">Research Interests</h4>
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+          <div class="flex items-center">
+            <div class="bg-cyan-500/20 p-2 rounded-full mr-3">
+              <i class="fas fa-shield-alt text-cyan-400"></i>
+            </div>
+            <span> Cybersecurity</span>
+          </div>
+          <div class="flex items-center">
+            <div class="bg-cyan-500/20 p-2 rounded-full mr-3">
+              <i class="fas fa-lock text-cyan-400"></i>
+            </div>
+            <span> Cryptography</span>
+          </div>
+          <div class="flex items-center">
+            <div class="bg-cyan-500/20 p-2 rounded-full mr-3">
+              <i class="fas fa-robot text-cyan-400"></i>
+            </div>
+            <span>Artificial Intelligence</span>
+          </div>
+          <div class="flex items-center">
+            <div class="bg-cyan-500/20 p-2 rounded-full mr-3">
+              <i class="fas fa-hand-pointer text-cyan-400"></i>
+            </div>
+            <span>Human-Computer Interaction </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+<!-- Contact Section -->
+<section id="contact" class="py-20 px-6 md:px-20 bg-gray-800/50">
+  <div class="max-w-6xl mx-auto">
+    <h3 class="text-3xl font-semibold mb-12 gradient-text inline-block">Get In Touch</h3>
+    
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-12">
+      <div>
+        <h4 class="text-2xl font-semibold mb-6">Contact Information</h4>
+        <div class="space-y-4">
+          <div class="flex items-start">
+            <div class="bg-cyan-500/20 p-2 rounded-full mr-4">
+              <i class="fas fa-envelope text-cyan-400"></i>
+            </div>
+            <div>
+              <h5 class="font-semibold">Email</h5>
+              <p class="text-gray-400">alenshyju27@gmail.com</p>
+            </div>
+          </div>
+          <div class="flex items-start">
+            <div class="bg-cyan-500/20 p-2 rounded-full mr-4">
+              <i class="fas fa-phone text-cyan-400"></i>
+            </div>
+            <div>
+              <h5 class="font-semibold">Phone</h5>
+              <p class="text-gray-400">+91 9048062060</p>
+            </div>
+          </div>
+          <div class="flex items-start">
+            <div class="bg-cyan-500/20 p-2 rounded-full mr-4">
+              <i class="fas fa-map-marker-alt text-cyan-400"></i>
+            </div>
+            <div>
+              <h5 class="font-semibold">Location</h5>
+              <p class="text-gray-400">Kerala, India</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="mt-8">
+          <h5 class="font-semibold mb-4">Connect with me</h5>
+          <div class="flex space-x-4">
+            <a href="#" class="bg-gray-700 hover:bg-cyan-500 w-10 h-10 rounded-full flex items-center justify-center transition">
+              <i class="fab fa-linkedin-in"></i>
+            </a>
+            <a href="#" class="bg-gray-700 hover:bg-cyan-500 w-10 h-10 rounded-full flex items-center justify-center transition">
+              <i class="fab fa-github"></i>
+            </a>
+            <a href="#" class="bg-gray-700 hover:bg-cyan-500 w-10 h-10 rounded-full flex items-center justify-center transition">
+              <i class="fab fa-twitter"></i>
+            </a>
+            <a href="#" class="bg-gray-700 hover:bg-cyan-500 w-10 h-10 rounded-full flex items-center justify-center transition">
+              <i class="fab fa-researchgate"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+      
+      <div>
+        <form id="contactForm" action="https://api.web3forms.com/submit" method="POST" class="space-y-6" autocomplete="off">
+          <!-- Access Key -->
+          <input type="hidden" name="access_key" value="093a31a0-ffb6-4ca9-a3d4-6686a5a53872">
+          <!-- Redirect URL -->
+          <input type="hidden" name="redirect" value="index.html">
+          <!-- Honeypot -->
+          <input type="checkbox" name="botcheck" class="hidden" style="display:none">
+    
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+            <div>
+              <label for="name" class="block text-sm font-medium text-gray-300 mb-1">Name</label>
+              <input type="text" id="name" name="name" required class="w-full rounded-lg bg-gray-700 text-white px-4 py-2 focus:ring-2 focus:ring-cyan-500 border-none">
+            </div>
+            <div>
+              <label for="email" class="block text-sm font-medium text-gray-300 mb-1">Email</label>
+              <input type="email" id="email" name="email" required class="w-full rounded-lg bg-gray-700 text-white px-4 py-2 focus:ring-2 focus:ring-cyan-500 border-none">
+            </div>
+          </div>
+    
+          <div>
+            <label for="subject" class="block text-sm font-medium text-gray-300 mb-1">Subject</label>
+            <input type="text" id="subject" name="subject" class="w-full rounded-lg bg-gray-700 text-white px-4 py-2 focus:ring-2 focus:ring-cyan-500 border-none">
+          </div>
+    
+          <div>
+            <label for="message" class="block text-sm font-medium text-gray-300 mb-1">Message</label>
+            <textarea id="message" name="message" rows="5" required class="w-full rounded-lg bg-gray-700 text-white px-4 py-2 focus:ring-2 focus:ring-cyan-500 border-none"></textarea>
+          </div>
+    
+          <button type="submit" class="w-full bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white py-3 rounded-lg text-lg font-semibold transition transform hover:scale-[1.01]">
+            Send Message
+          </button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+  <!-- Footer -->
+  <footer class="py-10 px-6 border-t border-gray-800">
+    <div class="max-w-6xl mx-auto">
+      <div class="flex flex-col md:flex-row justify-between items-center">
+        <div class="mb-4 md:mb-0">
+          <h2 class="text-xl font-bold gradient-text">Alen P Shyju</h2>
+          <p class="text-gray-400 mt-1">Cybersecurity Specialist & Researcher</p>
+        </div>
+        <div class="flex space-x-6">
+          <a href="#home" class="text-gray-400 hover:text-cyan-400 transition">Home</a>
+          <a href="#about" class="text-gray-400 hover:text-cyan-400 transition">About</a>
+          <a href="#projects" class="text-gray-400 hover:text-cyan-400 transition">Projects</a>
+          <a href="#contact" class="text-gray-400 hover:text-cyan-400 transition">Contact</a>
+        </div>
+      </div>
+      <div class="mt-8 pt-8 border-t border-gray-800 text-center text-gray-500 text-sm">
+        <p>© 2025 Alen P Shyju. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile menu toggle
+    const menuToggle = document.getElementById('menu-toggle');
+    const closeMenu = document.getElementById('close-menu');
+    const mobileMenu = document.getElementById('mobile-menu');
+    
+    menuToggle.addEventListener('click', () => {
+      mobileMenu.classList.remove('hidden');
+    });
+    
+    closeMenu.addEventListener('click', () => {
+      mobileMenu.classList.add('hidden');
+    });
+    
+    // Typing animation
+    const typedTextSpan = document.getElementById('typed');
+    const cursorSpan = document.querySelector('.cursor');
+    
+    const textArray = ["Cybersecurity Specialist", "Encryption Expert", "Network Security Analyst", "Researcher"];
+    const typingDelay = 100;
+    const erasingDelay = 50;
+    const newTextDelay = 1500;
+    let textArrayIndex = 0;
+    let charIndex = 0;
+    
+    function type() {
+      if (charIndex < textArray[textArrayIndex].length) {
+        typedTextSpan.textContent += textArray[textArrayIndex].charAt(charIndex);
+        charIndex++;
+        setTimeout(type, typingDelay);
+      } else {
+        setTimeout(erase, newTextDelay);
+      }
+    }
+    
+    function erase() {
+      if (charIndex > 0) {
+        typedTextSpan.textContent = textArray[textArrayIndex].substring(0, charIndex-1);
+        charIndex--;
+        setTimeout(erase, erasingDelay);
+      } else {
+        textArrayIndex++;
+        if(textArrayIndex>=textArray.length) textArrayIndex=0;
+        setTimeout(type, typingDelay + 1100);
+      }
+    }
+    
+    document.addEventListener('DOMContentLoaded', function() {
+      if(textArray.length) setTimeout(type, newTextDelay + 250);
+    });
+    
+    // Active nav link highlighting
+    const sections = document.querySelectorAll('section');
+    const navLinks = document.querySelectorAll('.nav-link');
+    
+    window.addEventListener('scroll', () => {
+      let current = '';
+      
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        
+        if(pageYOffset >= (sectionTop - 300)) {
+          current = section.getAttribute('id');
+        }
+      });
+      
+      navLinks.forEach(link => {
+        link.classList.remove('active-section');
+        if(link.getAttribute('href') === `#${current}`) {
+          link.classList.add('active-section');
+        }
+      });
+    });
+    
+    // Animate skill bars on scroll
+    const skillBars = document.querySelectorAll('.skill-bar');
+    
+    function animateSkillBars() {
+      skillBars.forEach(bar => {
+        const width = bar.style.width;
+        bar.style.width = '0';
+        setTimeout(() => {
+          bar.style.width = width;
+        }, 100);
+      });
+    }
+    
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting) {
+          animateSkillBars();
+          observer.unobserve(entry.target);
+        }
+      });
+    }, {threshold: 0.5});
+    
+    document.querySelector('#resume').style.opacity = '0';
+    setTimeout(() => {
+      document.querySelector('#resume').style.transition = 'opacity 1s ease';
+      document.querySelector('#resume').style.opacity = '1';
+      observer.observe(document.querySelector('#resume'));
+    }, 500);
+
+
+    
+  // Form Submission
+  //   document.addEventListener('DOMContentLoaded', function() {
+  //   const contactForm = document.getElementById('contactForm');
+    
+  //   if (contactForm) {
+  //     contactForm.addEventListener('submit', function(e) {
+  //       e.preventDefault();
+        
+  //       // Get form values
+  //       const name = document.getElementById('name').value;
+  //       const email = document.getElementById('email').value;
+  //       const subject = document.getElementById('subject').value;
+  //       const message = document.getElementById('message').value;
+        
+  //       // Basic validation
+  //       if (!name || !email || !message) {
+  //         alert('Please fill in all required fields');
+  //         return;
+  //       }
+        
+  //       // Email validation
+  //       const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+  //       if (!emailRegex.test(email)) {
+  //         alert('Please enter a valid email address');
+  //         return;
+  //       }
+        
+  //       // Show success message
+  //       alert(`Thank you, ${name}! Your message has been received. We will get back to you shortly. For urgent inquiries, please contact us directly using the email address provided.`);
+
+        
+  //       // Reset the form
+  //       contactForm.reset();
+        
+       
+  //     });
+  //   }
+  // });
+
+  // </script>
+</body>
+</html>
